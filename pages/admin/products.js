@@ -4,6 +4,8 @@ import CartContext from "@/context/CartContext";
 import Image from "next/image";
 import React, { useContext, useState } from "react";
 import { FaEdit, FaTrash } from "react-icons/fa";
+import { AiOutlineEye } from "react-icons/ai";
+import Link from "next/link";
 
 function Products() {
   const { products } = useContext(CartContext);
@@ -58,6 +60,11 @@ function Products() {
                   <button onClick={() => handleDelete(product.id)}>
                     <FaTrash className="text-red-600" />
                   </button>
+                  <Link
+                    href={{ pathname: "/admin/productDetails", query: product }}
+                  >
+                    <AiOutlineEye className="text-blue-400" />
+                  </Link>
                 </td>
               </tr>
             ))}

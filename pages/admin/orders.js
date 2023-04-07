@@ -2,6 +2,7 @@ import { useState } from "react";
 import { useRouter } from "next/router";
 import { FaEye } from "react-icons/fa";
 import AdminLayout from "@/components/AdminLayout";
+import Link from "next/link";
 
 const orders = [
   {
@@ -55,12 +56,15 @@ const OrderList = () => {
                 <td className="border px-4 py-2">{order.total}</td>
                 <td className="border px-4 py-2">{order.date}</td>
                 <td className="border px-4 py-2 flex justify-center">
-                  <button
+                  <Link
+                    href={{
+                      pathname: "/admin/orderDetails",
+                      query: order,
+                    }}
                     className="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded mr-2"
-                    onClick={() => handleDetailView(order.id)}
                   >
                     <FaEye />
-                  </button>
+                  </Link>
                 </td>
               </tr>
             ))}

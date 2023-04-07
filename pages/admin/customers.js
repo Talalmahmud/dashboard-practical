@@ -2,6 +2,8 @@ import AdminLayout from "@/components/AdminLayout";
 import CustomerForm from "@/components/CustomerForm";
 import React, { useState } from "react";
 import { FaEdit, FaTrash } from "react-icons/fa";
+import { AiOutlineEye } from "react-icons/ai";
+import Link from "next/link";
 
 const customers = [
   { id: 1, name: "John Doe", email: "john.doe@example.com" },
@@ -57,11 +59,20 @@ const Customers = () => {
                 <td>{customer.email}</td>
                 <td className="flex justify-center items-center gap-2">
                   <button className="mr-2" onClick={() => handleEdit(customer)}>
-                    <FaEdit className="text-green-400" />
+                    <FaEdit className="text-green-400 hover:bg-slate-500" />
                   </button>
                   <button onClick={() => handleDelete(customer.id)}>
-                    <FaTrash className="text-red-600" />
+                    <FaTrash className="text-red-600 hover:bg-slate-500" />
                   </button>
+                  <Link
+                    href={{
+                      pathname: "/admin/customerDetails",
+                      query: customer,
+                    }}
+                    className="hover:bg-slate-500"
+                  >
+                    <AiOutlineEye className="text-blue-400" />
+                  </Link>
                 </td>
               </tr>
             ))}
