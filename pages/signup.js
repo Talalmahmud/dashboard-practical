@@ -30,6 +30,7 @@ export default function LoginForm() {
   return (
     <div className="flex justify-center items-center h-screen">
       <div className="w-full max-w-md">
+        <h2 className="text-center font-bold text-2xl">Sign Up</h2>
         <form
           className="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4"
           onSubmit={handleSubmit}
