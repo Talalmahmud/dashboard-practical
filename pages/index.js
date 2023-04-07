@@ -1,5 +1,4 @@
 import Cart from "@/pages/posts/Cart";
-import { products } from "@/data/product";
 import Link from "next/link";
 import React, { useContext, useState } from "react";
 import "tailwindcss/tailwind.css";
