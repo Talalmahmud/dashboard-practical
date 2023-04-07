@@ -1,10 +1,7 @@
 import React from "react";
 import Head from "next/head";
-import Link from "next/link";
 import { FiUsers, FiShoppingBag, FiTruck, FiDollarSign } from "react-icons/fi";
-// import { useAuth } from "../context/authContext";
 import AdminLayout from "@/components/AdminLayout";
-import MonthlyRevenueChart from "@/components/MonthlyRevenueChart";
 
 const Overview = () => {
   //   const { user } = useAuth();
@@ -58,9 +55,6 @@ const Overview = () => {
           <div className="text-3xl font-semibold text-gray-700">$12,345</div>
         </div>
       </div>
-      {/* <div className="mt-8">
-        <MonthlyRevenueChart data={chartData} />
-      </div> */}
     </AdminLayout>
   );
 };
