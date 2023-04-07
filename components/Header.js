@@ -1,4 +1,5 @@
 import CartContext from "@/context/CartContext";
+import Head from "next/head";
 import Link from "next/link";
 import { useContext } from "react";
 import { FaShoppingCart } from "react-icons/fa";
@@ -7,6 +8,9 @@ const Header = () => {
   const { cart } = useContext(CartContext);
   return (
     <>
+      <Head>
+        <title>Header</title>
+      </Head>
       <header className="bg-gray-800 text-white sticky ">
         <nav className="container mx-auto py-4 flex justify-between items-center">
           <Link href="/" className="text-2xl font-bold">
@@ -19,17 +23,17 @@ const Header = () => {
               </Link>
             </li>
             <li>
-              <Link href="/posts" className="hover:text-gray-300">
+              <Link href="/" className="hover:text-gray-300">
                 Products
               </Link>
             </li>
             <li>
-              <Link href="/about" className="hover:text-gray-300">
+              <Link href="/" className="hover:text-gray-300">
                 About Us
               </Link>
             </li>
             <li>
-              <Link href="/contact" className="hover:text-gray-300">
+              <Link href="/" className="hover:text-gray-300">
                 Contact Us
               </Link>
             </li>

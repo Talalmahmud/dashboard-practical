@@ -1,5 +1,6 @@
 import CartContext from "@/context/CartContext";
 import Image from "next/image";
+import Link from "next/link";
 import { useContext } from "react";
 
 const Cart = () => {
@@ -62,9 +63,14 @@ const Cart = () => {
               <p className="text-lg font-semibold">Total:</p>
               <p className="text-lg font-semibold">${total}</p>
             </div>
-            <button className="bg-blue-600 text-white py-2 px-4 rounded-lg mt-4">
-              Proceed to Checkout
-            </button>
+            <div className="flex justify-center items-center">
+              <Link
+                href="/posts/checkout"
+                className="bg-blue-600 text-white py-2 px-4 rounded-lg mt-4"
+              >
+                Proceed to Checkout
+              </Link>
+            </div>
           </>
         )}
       </div>

@@ -8,7 +8,11 @@ const OrderDetails = () => {
 
   return (
     <AdminLayout>
-      <p>{order.date}</p>
+      <div className="flex justify-center items-center flex-col">
+        <h2 className="text-2xl">Name: {order.customerName}</h2>
+        <p>Price: ${order.total}</p>
+        <p>Date: {order.date}</p>
+      </div>
     </AdminLayout>
   );
 };

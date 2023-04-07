@@ -34,12 +34,6 @@ function HomePage() {
           fames ac turpis egestas. Nam scelerisque sem at ipsum porttitor, sit
           amet laoreet leo hendrerit.
         </p>
-        <Link
-          href="/products"
-          className="bg-gray-800 text-white py-2 px-4 rounded hover:bg-gray-700"
-        >
-          Shop Now
-        </Link>
 
         <div className="bg-slate-50 p-2 mt-5">
           <h2 className="text-center font-bold text-2xl bg-slate-100">

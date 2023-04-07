@@ -6,6 +6,7 @@ import React, { useContext, useState } from "react";
 import { FaEdit, FaTrash } from "react-icons/fa";
 import { AiOutlineEye } from "react-icons/ai";
 import Link from "next/link";
+import AddProductForm from "@/components/AddProductForm";
 
 function Products() {
   const { products } = useContext(CartContext);
@@ -26,7 +27,7 @@ function Products() {
 
           <button
             className="bg-blue-500 text-white font-bold py-2 px-4 rounded "
-            onClick={() => setshowProductForm(true)}
+            onClick={() => setShowProductForm(true)}
           >
             Add Product
           </button>
@@ -71,7 +72,9 @@ function Products() {
           </tbody>
         </table>
 
-        {showProductForm && <CustomerForm handleCloseForm={handleCloseForm} />}
+        {showProductForm && (
+          <AddProductForm handleCloseForm={handleCloseForm} />
+        )}
       </div>
     </AdminLayout>
   );
