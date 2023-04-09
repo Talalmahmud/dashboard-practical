@@ -31,7 +31,8 @@ To learn more about Next.js, take a look at the following resources:
 
 You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
 
-## phone number: +8801734567890 password: password
+## For admin login
+phone number: +8801734567890 password: password
 
 ## Deploy on Vercel
 
