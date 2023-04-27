@@ -5,8 +5,8 @@ import { useState } from "react";
 import { MdVisibility, MdVisibilityOff } from "react-icons/md";
 
 export default function LoginForm() {
-  const [phoneNumber, setPhoneNumber] = useState("");
-  const [password, setPassword] = useState("");
+  const [phoneNumber, setPhoneNumber] = useState("+8801734567890");
+  const [password, setPassword] = useState("password");
   const [showPassword, setShowPassword] = useState(false);
   const router = useRouter();
 
